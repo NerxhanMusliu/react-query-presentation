@@ -1,13 +1,24 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "../src/Pages/Home";
 import HomeWithoutKeys from "../src/Pages/HomeWithoutKeys";
 import DetailsWithTheSameKey from "../src/Pages/Breeds/DetailsWithSameKey";
 import Details from "../src/Pages/Breeds/Details";
 import "./styles.css";
+import List from "./Pages/Users/List";
 
 function App() {
   return (
     <Router>
+      <ul>
+        <li>
+          <Link to="/">Dog Breeds</Link>
+        </li>
+        <li>
+          <Link to="/users">Users</Link>
+        </li>
+      </ul>
+
+      <hr />
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/home-without-keys" element={<HomeWithoutKeys />} />
@@ -21,6 +32,8 @@ function App() {
           path="/details-with-same-key/"
           element={<DetailsWithTheSameKey />}
         />
+        {/* Users Routes */}
+        <Route path="/users/" element={<List />} />
       </Routes>
     </Router>
   );
