@@ -22,7 +22,7 @@ const List = () => {
       {data.map((user, id) => {
         return (
           <div key={id} className="item">
-            <Link className="link" to={`user-details/${user.id}`}>
+            <Link className="link" to={`details/${user.id}`}>
               {user.name}
             </Link>
           </div>

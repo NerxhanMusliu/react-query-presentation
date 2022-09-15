@@ -5,6 +5,7 @@ import DetailsWithTheSameKey from "../src/Pages/Breeds/DetailsWithSameKey";
 import Details from "../src/Pages/Breeds/Details";
 import "./styles.css";
 import List from "./Pages/Users/List";
+import UserDetails from "./Pages/Users/Details";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         />
         {/* Users Routes */}
         <Route path="/users/" element={<List />} />
+        <Route path="/users/details/:id" element={<UserDetails />} />
       </Routes>
     </Router>
   );

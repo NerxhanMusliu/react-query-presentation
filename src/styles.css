@@ -11,7 +11,6 @@
 }
 .item {
   padding: 4px;
-  font-style: italic;
 }
 .item::first-letter {
   text-transform: capitalize;
@@ -23,4 +22,51 @@
 .dog-image {
   max-width: 500px;
   max-height: 500p;
+}
+
+.item-post {
+  margin-bottom: 16px;
+}
+
+.post-title {
+  padding: 0;
+  margin: 0;
+}
+
+.post-title::first-letter {
+  text-transform: capitalize;
+}
+
+.post-body {
+  padding: 0;
+  margin: 4px 0 0;
+}
+
+.post-body::first-letter {
+  text-transform: capitalize;
+}
+
+.add-new-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-bottom: 20px;
+}
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.form-element-input {
+  min-height: 24px;
+}
+button {
+  margin-top: 10px;
+  min-height: 30px !important;
+  cursor: pointer;
+}
+
+.form-element-label {
+  margin-bottom: 4px;
 }

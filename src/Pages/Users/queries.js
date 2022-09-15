@@ -15,4 +15,18 @@ async function fetchUser() {
   return data;
 }
 
-export { fetchUser, usersKeys };
+async function fetchUserPosts(userId) {
+  const { data } = await axios.get(
+    `https://jsonplaceholder.typicode.com/users/${userId}/posts`
+  );
+  return data;
+}
+
+async function createPost(params) {
+  const data = await axios.post("https://jsonplaceholder.typicode.com/posts", {
+    ...params
+  });
+  return data;
+}
+
+export { fetchUser, fetchUserPosts, createPost, usersKeys };
