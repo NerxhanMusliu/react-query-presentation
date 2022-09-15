@@ -1,0 +1,26 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.wrapper {
+  padding-left: 20px;
+}
+.title {
+  text-transform: capitalize;
+}
+.item {
+  padding: 4px;
+  font-style: italic;
+}
+.item::first-letter {
+  text-transform: capitalize;
+}
+.link {
+  color: black;
+}
+
+.dog-image {
+  max-width: 500px;
+  max-height: 500p;
+}
