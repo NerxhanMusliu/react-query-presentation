@@ -1,7 +1,7 @@
-import "../../../styles.css";
+import "../../styles.css";
 import { useQuery } from "@tanstack/react-query";
 import { Link, useParams } from "react-router-dom";
-import { breedsKeys, fetchDogBreedDetails } from "../queries";
+import { breedsKeys, fetchDogBreedDetails } from "./queries";
 
 export default function DetailsWithTheSameKey() {
   const { breed } = useParams();

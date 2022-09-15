@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../src/Pages/Home";
 import HomeWithoutKeys from "../src/Pages/HomeWithoutKeys";
-import DetailsWithTheSameKey from "../src/Pages/Breeds/Details/DetailsWithSameKey";
-import Details from "../src/Pages/Breeds/Details/Details";
+import DetailsWithTheSameKey from "../src/Pages/Breeds/DetailsWithSameKey";
+import Details from "../src/Pages/Breeds/Details";
 import "./styles.css";
 
 function App() {
