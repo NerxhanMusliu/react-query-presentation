@@ -17,19 +17,19 @@ export default function Details() {
   );
 
   if (isFetching) {
-    return <div>Loading...</div>;
+    return <p>Loading...</p>;
   }
   if (isError) {
     return (
-      <div className="wrapper">
+      <>
         <Link to="/home-without-keys">Go back</Link>
         <div>Something went wrong: {error.message}</div>
-      </div>
+      </>
     );
   }
 
   return (
-    <div className="wrapper">
+    <>
       <Link to="/">Go back</Link>
       {data?.message ? (
         <>
@@ -41,6 +41,6 @@ export default function Details() {
           <h2 className="title">No data for requested breed {breed}</h2>
         </div>
       )}
-    </div>
+    </>
   );
 }

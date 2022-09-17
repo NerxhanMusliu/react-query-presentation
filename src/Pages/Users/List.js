@@ -17,7 +17,7 @@ const List = () => {
   }
 
   return (
-    <div className="wrapper">
+    <>
       <h2 className="title">Users Name</h2>
       {data.map((user, id) => {
         return (
@@ -28,7 +28,7 @@ const List = () => {
           </div>
         );
       })}
-    </div>
+    </>
   );
 };
 

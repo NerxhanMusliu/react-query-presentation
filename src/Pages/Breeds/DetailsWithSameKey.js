@@ -16,23 +16,23 @@ export default function DetailsWithTheSameKey() {
   );
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <p>Loading...</p>;
   }
 
   if (isError) {
     return (
-      <div className="wrapper">
+      <>
         <Link to="/home-without-keys">Go back</Link>
         <div>Something went wrong: {error.message}</div>
-      </div>
+      </>
     );
   }
 
   return (
-    <div className="wrapper">
-      <Link to="/home-without-keys">Go back</Link>
+    <>
+      <Link to="/breed-without-keys">Go back</Link>
       <h2 className="title">{breed}</h2>
       <img className="dog-image" src={data.message} alt={data.message} />
-    </div>
+    </>
   );
 }

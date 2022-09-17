@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { usersKeys, fetchUserPosts } from "./queries";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import AddNewPost from "./AddNewPost";
 
 const UserDetails = () => {
@@ -19,14 +19,15 @@ const UserDetails = () => {
   );
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <p>Loading...</p>;
   }
   if (isError) {
-    return <div>Error! {error.message}</div>;
+    return <p>Error! {error.message}</p>;
   }
 
   return (
-    <div className="wrapper">
+    <>
+      <Link to="/users">Go back</Link>
       <h2 className="title">Post for user with id {id}</h2>
       {data.map((post) => {
         return (
@@ -40,7 +41,7 @@ const UserDetails = () => {
       <hr />
       <h2 className="title">Add new post</h2>
       <AddNewPost userId={id} />
-    </div>
+    </>
   );
 };
 

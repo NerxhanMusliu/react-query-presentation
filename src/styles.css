@@ -7,18 +7,25 @@
   padding-left: 20px;
 }
 
-.navigation {
-  display: flex;
-  width: 100%;
-  justify-content: center;
+.navbar {
+  background-color: black;
+  border-radius: 6px;
 }
-.navigation-item {
-  margin-right: 8px;
+.navbar ul {
+  overflow: auto;
+}
+.navbar li {
+  float: left;
   list-style: none;
+  margin: 13px 20px;
 }
-
-.navigation-item a {
+.navbar li a {
+  padding: 3px 3px;
   text-decoration: none;
+  color: white;
+}
+.navbar li a:hover {
+  color: red;
 }
 
 .title {
