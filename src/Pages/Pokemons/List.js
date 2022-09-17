@@ -37,6 +37,7 @@ export const List = () => {
             ))
           )}
           <button
+            className="form-element-input"
             onClick={() => fetchNextPage()}
             disabled={!hasNextPage || isFetchingNextPage}
           >
