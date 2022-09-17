@@ -10,12 +10,15 @@ import UserDetails from "./Pages/Users/Details";
 function App() {
   return (
     <Router>
-      <ul>
-        <li>
-          <Link to="/">Dog Breeds</Link>
+      <ul className="navigation">
+        <li className="navigation-item">
+          <Link to="/">useQuery</Link>
         </li>
-        <li>
-          <Link to="/users">Users</Link>
+        <li className="navigation-item">
+          <Link to="/users">useMutation</Link>
+        </li>
+        <li className="navigation-item">
+          <Link to="/users">useInfintQuery</Link>
         </li>
       </ul>
 

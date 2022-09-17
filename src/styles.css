@@ -6,6 +6,21 @@
 .wrapper {
   padding-left: 20px;
 }
+
+.navigation {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.navigation-item {
+  margin-right: 8px;
+  list-style: none;
+}
+
+.navigation-item a {
+  text-decoration: none;
+}
+
 .title {
   text-transform: capitalize;
 }
