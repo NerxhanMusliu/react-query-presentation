@@ -6,12 +6,14 @@ import List from "./Pages/Users/List";
 import UserDetails from "./Pages/Users/Details";
 import BreedList from "./Pages/Breeds/List";
 import BreedListWithoutKeys from "./Pages/Breeds/ListWithoutKeys";
+import PokemonList from "./Pages/Pokemons/List";
+import PokemonDetails from "./Pages/Pokemons/Details";
 
 function App() {
   return (
     <Router>
       <header>
-        <nav class="navbar">
+        <nav className="navbar">
           <ul>
             <li className="navigation-item">
               <Link to="/">useQuery</Link>
@@ -23,7 +25,7 @@ function App() {
               <Link to="/users">useMutation</Link>
             </li>
             <li className="navigation-item">
-              <Link to="/users">useInfintQuery</Link>
+              <Link to="/pokemons">useInfintQuery</Link>
             </li>
           </ul>
         </nav>
@@ -48,6 +50,12 @@ function App() {
           {/* Users Routes */}
           <Route path="/users/" element={<List />} />
           <Route path="/users/details/:id" element={<UserDetails />} />
+          {/* Pokemon Routes */}
+          <Route path="/pokemons/" element={<PokemonList />} />
+          <Route
+            path="/pokemons/details/:pokemon"
+            element={<PokemonDetails />}
+          />
         </Routes>
       </div>
     </Router>
