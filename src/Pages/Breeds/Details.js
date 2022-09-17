@@ -30,7 +30,9 @@ export default function Details() {
 
   return (
     <>
-      <Link to="/">Go back</Link>
+      <Link className="link underline" to="/">
+        Go back
+      </Link>
       {data?.message ? (
         <>
           <h2 className="title">{breed}</h2>

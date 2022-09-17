@@ -25,6 +25,8 @@ const AddNewPost = ({ userId }) => {
   return (
     <>
       {showMessage && <h3>New Post has been created</h3>}
+      <h2 className="title">Add new post</h2>
+
       <div className="add-new-form">
         <div className="form-element">
           <label className="form-element-label">Title of the post:</label>

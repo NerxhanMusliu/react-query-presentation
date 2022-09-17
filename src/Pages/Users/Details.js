@@ -27,7 +27,9 @@ const UserDetails = () => {
 
   return (
     <>
-      <Link to="/users">Go back</Link>
+      <Link className="link underline" to="/users">
+        Go back
+      </Link>
       <h2 className="title">Post for user with id {id}</h2>
       {data.map((post) => {
         return (
@@ -39,7 +41,6 @@ const UserDetails = () => {
       })}
 
       <hr />
-      <h2 className="title">Add new post</h2>
       <AddNewPost userId={id} />
     </>
   );
