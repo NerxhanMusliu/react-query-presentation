@@ -22,7 +22,9 @@ export default function Details() {
   if (isError) {
     return (
       <>
-        <Link to="/home-without-keys">Go back</Link>
+        <Link className="link underline" to="/home-without-keys">
+          Go back
+        </Link>
         <div>Something went wrong: {error.message}</div>
       </>
     );

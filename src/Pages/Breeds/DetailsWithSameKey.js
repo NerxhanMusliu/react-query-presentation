@@ -32,7 +32,9 @@ export default function DetailsWithTheSameKey() {
 
   return (
     <>
-      <Link to="/breed-without-keys">Go back</Link>
+      <Link className="link underline" to="/breed-without-keys">
+        Go back
+      </Link>
       <h2 className="title">{breed}</h2>
       <img className="dog-image" src={data.message} alt={data.message} />
     </>
