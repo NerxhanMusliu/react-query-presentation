@@ -19,7 +19,7 @@ function App() {
               <Link to="/">useQuery</Link>
             </li>
             <li className="navigation-item">
-              <Link to="/breed-without-keys">useQuery With Same Keys</Link>
+              <Link to="/breed-without-keys">useQuery Without Keys</Link>
             </li>
             <li className="navigation-item">
               <Link to="/users">useMutation</Link>
@@ -32,6 +32,7 @@ function App() {
       </header>
       <div className="wrapper">
         <Routes>
+          {/* Dog Breeds Routes */}
           <Route path="/" exact element={<BreedList />} />
           <Route
             path="/breed-without-keys"

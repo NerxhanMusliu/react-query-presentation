@@ -99,7 +99,8 @@ body {
 }
 button {
   margin-top: 10px;
-  min-height: 30px !important;
+  min-height: 40px !important;
+  padding: 4px 12px;
   cursor: pointer;
   background: black;
   color: white;
@@ -112,4 +113,7 @@ button:hover {
 
 .form-element-label {
   margin-bottom: 4px;
+}
+.info-wrapper {
+  padding: 12px 4px;
 }

@@ -10,15 +10,19 @@ const AddNewPost = ({ userId }) => {
   const queryClient = useQueryClient();
 
   const { isLoading, isError, error, mutate } = useMutation(createPost, {
-    onSuccess: () => {
+    onSuccess: async (newPost) => {
       setShowMessage(true);
       setBody("");
       setTitle("");
-      queryClient.invalidateQueries(usersKeys.detail(userId));
+      queryClient.setQueryData(
+        usersKeys.detail(userId),
+        (previousCacheData) => [...previousCacheData, newPost.data]
+      );
     }
   });
 
-  const createPostAction = () => {
+  const createPostAction = (e) => {
+    e.preventDefault();
     mutate({ title, body, userId });
   };
 
@@ -28,31 +32,35 @@ const AddNewPost = ({ userId }) => {
       <h2 className="title">Add new post</h2>
 
       <div className="add-new-form">
-        <div className="form-element">
-          <label className="form-element-label">Title of the post:</label>
-          <input
-            className="form-element-input"
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </div>
+        <form onSubmit={createPostAction}>
+          <div className="form-element">
+            <label className="form-element-label">Title of the post:</label>
+            <input
+              required
+              className="form-element-input"
+              type="text"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </div>
 
-        <div className="form-element">
-          <label className="form-element-label">Body of the post:</label>
-          <input
-            className="form-element-input"
-            type="text"
-            value={body}
-            onChange={(e) => setBody(e.target.value)}
-          />
-        </div>
+          <div className="form-element">
+            <label className="form-element-label">Body of the post:</label>
+            <input
+              required
+              className="form-element-input"
+              type="text"
+              value={body}
+              onChange={(e) => setBody(e.target.value)}
+            />
+          </div>
 
-        <button className="form-element-input" onClick={createPostAction}>
-          Create new post
-        </button>
+          <button type="submit" className="form-element-input">
+            Create new post
+          </button>
+        </form>
 
-        <div className="">
+        <div className="info-wrapper">
           {isLoading ? "updating..." : ""}
           {isError ? error.message : ""}
         </div>
