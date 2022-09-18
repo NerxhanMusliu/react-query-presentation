@@ -22,7 +22,7 @@ export default function DetailsWithTheSameKey() {
   if (isError) {
     return (
       <>
-        <Link className="link underline" to="/home-without-keys">
+        <Link className="link underline" to="/breed-without-keys">
           Go back
         </Link>
         <div>Something went wrong: {error.message}</div>
